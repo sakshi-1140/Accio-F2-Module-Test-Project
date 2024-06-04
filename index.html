@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h2>Student Portal</h1>
+        </div>
+        <div class="main-content">
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search">
+            <button onclick="searchTable()">Search</button>
+        </div>
+        <div class="button-group">
+            <button onclick="sortTable('name', 'asc')">Sort A &#10230; Z</button>
+            <button onclick="sortTable('name', 'desc')">Sort Z &#10230; A</button>
+            <button onclick="sortTable('marks', 'asc')">Sort By Marks</button>
+            <button onclick="filterPassing()">Sort By Passing</button>
+            <button onclick="sortTable('class', 'asc')">Sort By Class</button>
+            <button onclick="sortByGender()">Sort By Gender</button>
+        </div>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Marks</th>
+                    <th>Passing</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will come here -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
